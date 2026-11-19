@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dale Daniel — Robotics Engineer</title>
+    <meta
+      name="description"
+      content="Dale Daniel — robotics engineer in Austin, TX. Robot calibration, aerospace drilling cells, digital twins and the software that proves them."
+    />
+    <meta name="theme-color" content="#05070a" />
+    <meta property="og:title" content="Dale Daniel — Robotics Engineer" />
+    <meta property="og:description" content="Robot calibration, aerospace drilling cells, digital twins and the software that proves them." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://daledanielws.github.io/" />
+    <meta property="og:image" content="https://daledanielws.github.io/media/nashville-guitar-cover.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.classList.replace('no-js', 'js');
+      // apply the saved light/dark choice before first paint (no flash)
+      try {
+        if (localStorage.getItem('dd-theme') === 'light') document.documentElement.dataset.theme = 'light';
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-CVpuC97i.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DVS0qZdp.css">
+  </head>
+  <body class="is-booting">
+    <!-- boot -->
+    <div class="boot" id="boot" aria-hidden="true">
+      <div class="boot__shutter boot__shutter--top"></div>
+      <div class="boot__shutter boot__shutter--bot"></div>
+      <div class="boot__panel">
+        <div class="boot__brand"><span>DD // SYSTEMS</span><span id="boot-ver">BOOT</span></div>
+        <div class="boot__log" id="boot-log"></div>
+        <div class="boot__bar"><i id="boot-bar"></i></div>
+        <div class="boot__pct"><span>INITIALIZING WORKCELL</span><span id="boot-pct">000%</span></div>
+      </div>
+      <div class="boot__skip">CLICK TO SKIP</div>
+    </div>
+
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <div class="cursor__ring"><span class="cursor__label"></span></div>
+      <div class="cursor__dot"></div>
+    </div>
+
+    <header class="nav" id="nav">
+      <a class="nav__brand" href="#top" aria-label="Back to top">
+        <span class="nav__mark"><span id="nav-initials">DD</span></span>
+        <span id="nav-name">DALE DANIEL</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Sections"></nav>
+      <div class="nav__meta">
+        <span class="status"><i></i><span id="nav-status"></span></span>
+        <span class="clock" id="clock">--:--:--</span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch light / dark mode" data-cursor="MODE">
+          <span class="theme-toggle__track"><i></i></span><span class="theme-toggle__label">LIGHT</span>
+        </button>
+        <button class="nav__burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+      </div>
+    </header>
+    <nav class="menu" id="menu" aria-label="Mobile"></nav>
+
+    <div class="rail" id="rail" aria-hidden="true">
+      <div class="rail__fill"></div>
+      <span class="rail__pct">000%</span>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero__vignette"></div>
+        <div class="wrap hero__content">
+          <div class="hero__eyebrow" id="hero-eyebrow"></div>
+          <h1 class="hero__title" id="hero-title"></h1>
+          <div class="hero__role" id="hero-role"></div>
+          <p class="hero__lede" id="hero-lede"></p>
+          <div class="hero__cta">
+            <a class="btn btn--solid" href="#work">View mission files <span class="arr">→</span></a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero__hudlayer">
+          <div class="hero__axis">
+            <div>SCENE <b>WORKCELL-01</b></div>
+            <div>ROBOT <b>6-AXIS ARTICULATED</b></div>
+            <div>SENSOR <b>LDS · LINE LASER</b></div>
+            <div>PART <b>AERO SKIN PANEL</b></div>
+          </div>
+          <aside class="hud brackets" id="hud" aria-hidden="true">
+            <span class="br-b"></span>
+            <div class="hud__head"><span>ROBOT // R-01</span><span class="rec">LIVE</span></div>
+            <div id="hud-joints"></div>
+            <div class="hud__grid">
+              <div>TCP X<b data-hud="x">0</b></div>
+              <div>TCP Y<b data-hud="y">0</b></div>
+              <div>TCP Z<b data-hud="z">0</b></div>
+            </div>
+            <div class="hud__grid">
+              <div class="laser">LDS RANGE<b data-hud="range">—</b></div>
+              <div>CLOUD PTS<b data-hud="pts">0</b></div>
+              <div>MODE<b>SCAN</b></div>
+            </div>
+            <div class="hud__foot"><span>PROGRAM</span><b>SKIN_SCAN.LS</b></div>
+          </aside>
+          <div class="hero__scroll"><i></i>SCROLL TO EXPLORE</div>
+        </div>
+      </section>
+
+      <div class="marquee" data-dir="1"><div class="marquee__track" id="marquee-a"></div></div>
+      <div class="marquee marquee--alt" data-dir="-1"><div class="marquee__track" id="marquee-b"></div></div>
+
+      <section class="section bp-grid" id="about"></section>
+      <section class="section section--layer section--alt" id="work"></section>
+      <section class="section section--layer bp-grid" id="calibration"></section>
+      <section class="section section--layer section--alt" id="experience"></section>
+      <section class="section section--layer bp-grid" id="stack"></section>
+      <section class="contact section--layer section--alt" id="contact"></section>
+    </main>
+
+    <!-- project dossier overlay -->
+    <div class="dossier" id="dossier" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="dossier-title">
+      <div class="dossier__scrim" data-close></div>
+      <div class="dossier__layer"></div>
+      <div class="dossier__panel">
+        <div class="dossier__bar">
+          <span><span class="code" id="dossier-code">MF-00</span> / MISSION FILE</span>
+          <div class="dossier__nav">
+            <button data-prev aria-label="Previous project">← PREV</button>
+            <button data-next aria-label="Next project">NEXT →</button>
+            <button data-close aria-label="Close">CLOSE ✕</button>
+          </div>
+        </div>
+        <div class="dossier__scroll" id="dossier-scroll"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
