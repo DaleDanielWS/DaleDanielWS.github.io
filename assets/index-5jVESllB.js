@@ -22,7 +22,7 @@ const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./deimos-DsmWOITF.js",
     <div class="stats">${Al.map(e=>`<div class="stat rv" data-spot>
           <div class="stat__code">[ ${$(e.code)} ]</div>
           <div class="stat__num">${e.prefix?$(e.prefix):``}<span data-count="${e.value}" data-dec="${e.decimals}">0</span>${e.suffix?`<small>${$(e.suffix)}</small>`:``}</div>
-          <div class="stat__label">${$(e.label)}</div>${[[e.list,``],[e.processes,` stat__list--acc`]].filter(([e])=>e).map(([e,t])=>`<div class="stat__list${t}">${e.map(e=>$(e.toUpperCase())).join(` · `)}</div>`).join(``)}
+          <div class="stat__label">${$(e.label)}</div>${[[e.list,``],[e.processes,` stat__list--acc`]].filter(([e])=>e).map(([e,t])=>`<div class="stat__list${t}"><span>${e.map(e=>`<i>${$(e.toUpperCase())}</i>`).join(``)}</span></div>`).join(``)}
         </div>`).join(``)}</div>
   </div>`}function pf(e){return e.media.img?`<img src="${e.media.img.replace(/\.(\w+)$/,`-sm.$1`)}" onerror="this.onerror=null;this.src='${e.media.img}'" alt="" loading="lazy" decoding="async" />`:`<canvas data-viz="${e.media.viz}"></canvas>`}function mf(){let e=Object.fromEntries(jl.map(e=>[e.id,e.id===`all`?Pl.length:Pl.filter(t=>t.cats.includes(e.id)).length]));Q(`#work`).innerHTML=`<div class="wrap">
     ${lf(`work`)}
